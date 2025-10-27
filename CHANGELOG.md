@@ -14,4 +14,8 @@
   - View the current inventory.
   - Search for items by name.
 
-
+## Version  1.2
+- 2025-10-27
+- Added requested feature of instead of needing to pick choice 4 to see current inventory , the inventory displays after every change
+-system does not crash after removing items
+- Bug fix (when updating quantity of an item , it will not display its old/previous quantity, instead will display new quantity)
