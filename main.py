@@ -46,8 +46,9 @@ def display_inventory(inventory):
     else:
         print("Current Inventory:")
         for name in inventory:
-            quantity = inventory[name]
+            
             print(f"{name}: Quantity: {quantity}")
+
 
 # Initialize inventory with two example items
 inventory = {
@@ -56,23 +57,24 @@ inventory = {
 }
 
 while True:
-    print("\n1. Add item\n2. Remove item\n3. Update quantity\n4. Display inventory\n5. Exit")
+    print("\n1. Add item\n2. Remove item\n3. Update quantity\n4. Exit")
     choice = input("Enter your choice (1-5): ")
 
     if choice == "1":
         name = input("Enter item name: ")
         quantity = int(input("Enter item quantity: "))
         add_item(inventory, name, quantity)
+        display_inventory(inventory)
     elif choice == "2":
         name = input("Enter item name to remove: ")
         remove_item(inventory, name)
+        display_inventory(inventory)
     elif choice == "3":
         name = input("Enter item name to update: ")
         quantity = input("Enter new quantity: ")
         update_quantity(inventory, name, quantity)
-    elif choice == "4":
         display_inventory(inventory)
-    elif choice == "5":
+    elif choice == "4":
         print("Exiting the program.")
         break
     else:
